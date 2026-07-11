@@ -1,0 +1,31 @@
+@layer base {
+  .cm-editor {
+    @apply bg-white dark:bg-neutral-950;
+  }
+
+  .c2 .cm-gutters {
+    @apply bg-white dark:bg-neutral-950;
+  }
+}
+
+.c1.cm-focused {
+  outline: 0px solid transparent !important;
+  border: none;
+}
+
+.cm-foldGutter {
+  width: 1rem;
+}
+
+.cm-gutters.cm-gutters-before {
+  border: 0;
+}
+
+/* Override CodeMirror syntax highlighting - targets scoped .cb class */
+.cm-editor .cm-content [class*="cb"] {
+  color: var(--color-white) !important;
+}
+
+.dark .cm-editor .cm-content [class*="cb"] {
+  color: var(--color-white) !important;
+}

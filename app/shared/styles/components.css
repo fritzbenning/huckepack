@@ -1,0 +1,111 @@
+iframe {
+  background: light-dark(transparent, transparent) !important;
+  background-color: light-dark(transparent, transparent) !important;
+}
+
+/* Dark mode iframe override - ensure it stays transparent */
+.dark iframe {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Override Sandpack loading container background - must be very specific to override theme colors */
+/* Note: Sandpack uses different class names for dark/light themes */
+.sp-loading,
+.sp-c-kKzdnH,
+.sp-c-flHYPS,
+.sp-loading[style],
+.sp-loading *,
+.sp-overlay,
+.sp-preview,
+.sp-preview-container,
+.sp-preview-actions,
+/* Light mode wrapper classes */
+.sp-1243324791,
+.sp-c-fVPbOs-gMQIch-variant-light,
+/* Dark mode wrapper classes */
+.sp-991379009,
+.sp-c-fVPbOs-LrWkf-variant-dark,
+/* Common wrapper class */
+.sp-c-fVPbOs,
+.sp-layout {
+  background: light-dark(transparent, transparent) !important;
+  background-color: light-dark(transparent, transparent) !important;
+}
+
+
+
+.sp-loading {
+  opacity: 0 !important;
+}
+
+/* .sp-overlay p,
+.sp-loading + div p {
+  display: none !important;
+} */
+
+.sp-tab-container {
+  outline: none !important;
+}
+
+.sp-tab-button {
+  outline: none !important;
+  font-weight: 500;
+}
+
+.sp-tab-button[data-active="true"] {
+  color: #000 !important;
+}
+
+.sp-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+  background-color: light-dark(transparent, transparent) !important;
+}
+
+/* Dark mode wrapper override */
+.dark .sp-wrapper {
+  background-color: transparent !important;
+}
+
+
+.sp-preview {
+  background: transparent !important;
+  /* background: url(/images/dotted-background-transparent.png) 0 0 / 10px 10px transparent repeat !important; */
+}
+
+/* .editor {
+  background: url(/images/dotted-background-transparent.png) 0 0 / 10px 10px transparent repeat;
+} */
+
+.sp-tab-button,
+.sp-tab-container {
+  outline: none;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.inspector-tool {
+  @apply bg-neutral-100 dark:bg-neutral-900 rounded-md;
+}
+
+.inspector-tool-active {
+  @apply border-neutral-150 bg-white text-neutral-950 dark:border-neutral-800 dark:bg-neutral-850 dark:text-neutral-100 rounded-sm;
+}
+
+.py-v1\/12 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: rgba(95, 0, 158, 0.6);
+}

@@ -1,0 +1,195 @@
+{
+  "name": "huckepack",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/desktop-app/main.js",
+  "homepage": "./",
+  "pnpm": {
+    "overrides": {
+      "cookie": "^1.1.1"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:frontend": "vite",
+    "dev:fullstack": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "electron": "wait-on tcp:5173 && electron .",
+    "electron-dev": "concurrently \"npm run dev\" \"wait-on tcp:5173 && electron .\"",
+    "electron-pack": "ELECTRON_PROD=true npm run build && electron-builder",
+    "vercel-build": "npm run build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "vitest",
+    "test:unit": "vitest run --exclude '**/*.stories.{ts,tsx}'",
+    "test:watch": "vitest --exclude '**/*.stories.{ts,tsx}'",
+    "test:coverage": "vitest run --coverage --exclude '**/*.stories.{ts,tsx}'"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^2.0.53",
+    "@ai-sdk/google-vertex": "^3.0.94",
+    "@ai-sdk/openai": "^2.0.77",
+    "@ai-sdk/react": "^2.0.115",
+    "@auth/core": "^0.37.0",
+    "@codemirror/lang-javascript": "^6.2.4",
+    "@codemirror/language": "^6.11.3",
+    "@codemirror/state": "^6.5.2",
+    "@codemirror/view": "^6.38.6",
+    "@codesandbox/sandpack-react": "2.20.0",
+    "@convex-dev/agent": "^0.3.2",
+    "@convex-dev/auth": "^0.0.90",
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@dprint/formatter": "^0.4.1",
+    "@fontsource-variable/bricolage-grotesque": "^5.2.8",
+    "@fontsource-variable/manrope": "^5.2.6",
+    "@fontsource/fira-code": "^5.2.6",
+    "@fontsource/inria-sans": "^5.2.6",
+    "@lezer/highlight": "^1.2.3",
+    "@octokit/app": "^16.1.1",
+    "@octokit/rest": "^22.0.0",
+    "@openrouter/ai-sdk-provider": "^1.4.1",
+    "@phosphor-icons/react": "^2.1.10",
+    "@swc/core": "^1.13.5",
+    "@swc/wasm": "^1.13.20",
+    "@swc/wasm-web": "^1.13.20",
+    "@tabler/icons-react": "^3.36.0",
+    "@types/cors": "^2.8.19",
+    "@uiw/react-codemirror": "^4.25.2",
+    "@vitejs/plugin-react": "^4.6.0",
+    "ai": "^5.0.107",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
+    "convex": "^1.30.0",
+    "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
+    "diff": "^8.0.2",
+    "dotenv": "^17.2.0",
+    "electron-serve": "^1.3.0",
+    "electron-updater": "^6.3.0",
+    "gradflow": "^0.1.0",
+    "idb-keyval": "^6.2.2",
+    "immer": "^11.1.3",
+    "motion": "^12.23.0",
+    "nanoid": "^5.1.5",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "react": "19.2.0",
+    "react-beautiful-color": "^2.1.0",
+    "react-docgen-typescript": "^2.4.0",
+    "react-dom": "19.2.0",
+    "react-markdown": "^10.1.0",
+    "react-resizable-panels": "^3.0.6",
+    "react-router-dom": "^7.9.6",
+    "react-syntax-highlighter": "^16.1.0",
+    "react-window": "^1.8.11",
+    "react-window-infinite-loader": "^1.0.10",
+    "recast": "^0.23.11",
+    "rehype-highlight": "^7.0.2",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "sonner": "^2.0.7",
+    "streamdown": "^1.6.10",
+    "swc-walk": "^1.0.0",
+    "tailwind-merge": "^3.3.0",
+    "thememirror": "^2.0.1",
+    "ts-node": "^10.9.2",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.0.0",
+    "unist-util-visit-parents": "^6.0.2",
+    "vite": "^7.0.0",
+    "vite-plugin-electron": "^0.29.0",
+    "vite-plugin-electron-renderer": "^0.14.6",
+    "vite-plugin-svgr": "^4.3.0",
+    "zod": "^4.1.13",
+    "zustand": "^5.0.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
+    "@chromatic-com/storybook": "^4.1.3",
+    "@eslint/eslintrc": "^3",
+    "@storybook/addon-a11y": "^10.1.4",
+    "@storybook/addon-docs": "^10.1.4",
+    "@storybook/addon-onboarding": "^10.1.4",
+    "@storybook/addon-vitest": "^10.1.4",
+    "@storybook/react-vite": "^10.1.4",
+    "@tailwindcss/postcss": "^4.1.8",
+    "@types/hast": "^3.0.4",
+    "@types/node": "^20.19.10",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "@types/react-window": "^1.8.8",
+    "@vercel/node": "^5.3.11",
+    "@vitest/browser-playwright": "^4.0.15",
+    "@vitest/coverage-v8": "^4.0.15",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^8.2.2",
+    "electron": "^39.0.0",
+    "electron-builder": "^26.0.12",
+    "eslint": "^9",
+    "eslint-plugin-storybook": "^10.1.4",
+    "playwright": "^1.57.0",
+    "postcss": "^8.5.6",
+    "storybook": "^10.1.4",
+    "tailwindcss": "^4.1.16",
+    "tsx": "^4.20.3",
+    "tw-animate-css": "^1.3.3",
+    "typescript": "^5.8.3",
+    "vercel": "^48.2.9",
+    "vite-plugin-top-level-await": "^1.6.0",
+    "vite-plugin-wasm": "^3.5.0",
+    "vitest": "^4.0.15",
+    "wait-on": "^8.0.0"
+  },
+  "build": {
+    "appId": "com.yourname.huckepack",
+    "productName": "Huckepack",
+    "protocols": [
+      {
+        "name": "huckepack-oauth",
+        "schemes": [
+          "huckepack"
+        ]
+      }
+    ],
+    "directories": {
+      "output": "dist/packages",
+      "buildResources": "electron/build"
+    },
+    "files": [
+      "dist/web/**/*",
+      "dist/desktop-app/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "dist/web",
+        "to": "dist"
+      }
+    ],
+    "icon": "electron/build/icons/icon.png",
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "icon": "electron/build/icons/icon.icns"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "electron/build/icons/icon.ico"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "electron/build/icons/icon.png"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  }
+}

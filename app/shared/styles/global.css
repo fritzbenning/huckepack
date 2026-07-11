@@ -1,0 +1,39 @@
+@layer base {
+  * {
+    @apply border-neutral-200 outline-neutral-400/50 dark:border-white/10 dark:outline-neutral-500/50;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  height: 100vh;
+  height: 100dvh;
+}
+
+body {
+  font-family: var(--font-sans);
+  height: 100vh;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+}
+
+*,
+a,
+button {
+  cursor: default;
+  user-select: none;
+}
+
+::selection {
+  @apply bg-primary-500/50;
+}
+
+[id="1p-live-region"] { display: none !important; }

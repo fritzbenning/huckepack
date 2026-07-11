@@ -1,0 +1,2 @@
+export { generateIdFromString } from "./generateIdFromString";
+

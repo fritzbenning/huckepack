@@ -1,0 +1,1 @@
+export { isNumericFeature } from "./isNumericFeature";

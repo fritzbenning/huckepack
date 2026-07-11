@@ -1,0 +1,1 @@
+export { isPercentFeature } from "./isPercentFeature";

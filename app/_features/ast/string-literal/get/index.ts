@@ -1,0 +1,2 @@
+export { getStringLiteralValue } from "./getStringLiteralValue";
+

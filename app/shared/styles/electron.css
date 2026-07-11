@@ -1,0 +1,8 @@
+/* Electron app region styles */
+.app-drag-region {
+  -webkit-app-region: drag;
+}
+
+.app-no-drag {
+  -webkit-app-region: no-drag;
+}

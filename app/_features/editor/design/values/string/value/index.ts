@@ -1,0 +1,1 @@
+export { extractStringValue } from "./extractStringValue";

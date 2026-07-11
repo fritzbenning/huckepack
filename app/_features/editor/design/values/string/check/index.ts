@@ -1,0 +1,1 @@
+export { isStringFeature } from "./isStringFeature";

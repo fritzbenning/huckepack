@@ -1,0 +1,2 @@
+export { addInterfaceProperty } from "./addInterfaceProperty";
+

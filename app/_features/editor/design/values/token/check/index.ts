@@ -1,0 +1,1 @@
+export { hasTokenClass } from "./hasTokenClass";

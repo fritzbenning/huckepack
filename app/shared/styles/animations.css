@@ -1,0 +1,111 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-fade-in-slow {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-fade-in-fast {
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes loadingBarMove {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+.animate-loading-bar {
+  width: 30%;
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.3) 0%, rgba(99, 102, 241, 1) 50%, rgba(99, 102, 241, 0.3) 100%);
+  transform: translateX(-100%);
+  animation: loadingBarMove 2s linear infinite;
+}
+
+.animate-loading-bar-complete {
+  width: 30%;
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.3) 0%, rgba(99, 102, 241, 1) 50%, rgba(99, 102, 241, 0.3) 100%);
+  transform: translateX(-100%);
+  animation: loadingBarMove 2s linear 1;
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease-in-out infinite;
+}
+
+@keyframes gradientFadeInUp {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-gradient-fade-in-up {
+  animation: gradientFadeInUp 2s ease-out;
+}
+
+@keyframes colorful-glow {
+  0% {
+    box-shadow: 
+      inset 0 60px 60px rgba(236, 72, 153, 0.15);
+  }
+  33% {
+    box-shadow: 
+      inset 0 60px 60px rgba(99, 102, 241, 0.15);
+  }
+  66% {
+    box-shadow: 
+      inset 0 60px 60px rgba(236, 72, 153, 0.15);
+  }
+  100% {
+    box-shadow: 
+      inset 0 60px 60px rgba(236, 72, 153, 0.15);
+  }
+}
+
+.animate-colorful-glow {
+  position: relative;
+}
+
+.animate-colorful-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  animation: colorful-glow 4s ease-in-out infinite;
+}
+
+.animate-colorful-glow.animate-colorful-glow-active::before {
+  opacity: 1;
+}

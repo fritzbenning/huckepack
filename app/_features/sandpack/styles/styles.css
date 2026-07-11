@@ -1,0 +1,290 @@
+:root {
+  --breakpoint-width: 95%;
+}
+
+#root {
+  height: 100%;
+  color: black;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: light-dark(transparent, transparent);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+  transition: scrollbar-color 0.1s;
+}
+
+.router-container {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.preview-container {
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  place-content: center;
+  /* opacity: 0; */
+  /* animation: fadeIn 0.2s 0.3s ease-in-out forwards; */
+  transform-origin: top;
+}
+
+.preview-inner {
+  container-name: viewport;
+  padding: 1.5rem;
+}
+
+.canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.canvas-container[tabindex]:focus {
+  outline: none;
+}
+
+.app-root {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  width: 28.5%;
+  height: 28.5%;
+}
+
+.component-root {
+  margin: auto;
+  width: var(--breakpoint-width);
+  position: relative;
+  flex-shrink: 0;
+  /* min-width: min-content; */
+  opacity: 0;
+  animation: fadeIn 0.2s 0.3s ease-in-out forwards;
+}
+
+.component-root * {
+  user-select: none;
+}
+
+.resize-handle {
+  position: absolute;
+  top: 1rem;
+  right: -12px;
+  width: 12px;
+  height: 32px;
+  cursor: ew-resize;
+  z-index: 10000;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  transform: scale(calc(1 / var(--zoom)));
+  transform-origin: center left;
+  transition:
+    transform 0.1s ease,
+    opacity 0.2s ease-in-out;
+}
+
+.resize-handle.is-active {
+  opacity: var(--tool-opacity);
+}
+
+.component-root:hover .resize-handle {
+  opacity: calc(var(--tool-opacity) * 0.5);
+}
+
+.resize-handle::before {
+  content: "";
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 32px;
+  background: oklch(55.2% 0.016 285.938);
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.resize-handle:hover::before {
+  transform: scaleY(1.3);
+}
+
+.is-element {
+  --frame-color: oklch(62.3% 0.214 259.815);
+  --label-color: oklch(62.3% 0.214 259.815 / 0.9);
+}
+
+.is-property,
+.is-editable {
+  --frame-color: oklch(0.5869 0.2518 299.65);
+  --label-color: oklch(0.5869 0.2518 299.65 / 0.9);
+}
+
+.is-pattern {
+  --frame-color: oklch(59.2% 0.249 0.584);
+  --label-color: oklch(59.2% 0.249 0.584 / 0.9);
+}
+
+.select-frame {
+  position: absolute;
+  border: calc(1.5px / var(--zoom)) solid var(--frame-color);
+  z-index: 9999;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.select-frame.is-pattern {
+  background-color: oklch(59.2% 0.249 0.584 / 0.15);
+}
+
+.node-tools {
+  position: absolute;
+  top: calc(100% + (0.25rem / var(--zoom)));
+  will-change: transform, opacity;
+  left: -1px;
+  display: flex;
+  gap: 0.25rem;
+  z-index: 10000;
+  transform: scale(calc(1 / var(--zoom)));
+  transform-origin: top left;
+  transition:
+    transform 0.1s ease,
+    opacity 0.2s ease-in-out;
+  opacity: var(--tool-opacity);
+}
+
+.node-tools.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tag-label {
+  background-color: oklch(59.2% 0.249 0.584 / 0.9);
+  color: white;
+  font-size: 0.625rem;
+  height: 1.25rem;
+  padding: 0.15rem 0.375rem;
+  border-radius: 0.375rem;
+}
+
+/* Tag label colors based on data attributes using CSS custom properties */
+.tag-label.is-property,
+.tag-label.is-pattern,
+.tag-label.is-element {
+  background-color: var(--label-color);
+}
+
+.tag-label {
+  white-space: nowrap;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+}
+
+.is-editable .tag-label {
+  background-color: oklch(0.5869 0.2518 299.65 / 0.9);
+}
+
+.new-element-btn,
+.edit-button {
+  background-color: oklch(59.2% 0.249 0.584 / 0.9);
+  backdrop-filter: blur(8px);
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: medium;
+  pointer-events: auto;
+  background-image: url("https://huckepack-sooty.vercel.app/images/icons/plus.svg");
+  background-size: 0.75rem;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: default;
+}
+
+.is-editable .new-element-btn {
+  background-color: oklch(0.5869 0.2518 299.65 / 0.9);
+}
+
+.new-element-btn:hover {
+  filter: brightness(0.9);
+}
+
+.confirm {
+  position: absolute;
+  top: calc(100% + (0.25rem / var(--zoom)));
+  right: -1px;
+  background-color: oklch(0.5869 0.2518 299.65 / 0.9);
+  backdrop-filter: blur(8px);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  width: auto;
+  height: 1.25rem;
+  font-size: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  z-index: 10000;
+  padding: 0rem 0.375rem;
+  transform: scale(calc(1 / var(--zoom)));
+  transform-origin: top right;
+  transition:
+    transform 0.1s ease,
+    opacity 0.2s ease-in-out;
+  opacity: var(--tool-opacity);
+  will-change: transform, opacity;
+}
+
+.confirm.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.component-root * {
+  will-change: transform;
+}
+
+.component-root .is-idle {
+  transition: 0.25s ease transform;
+}
+
+.component-root .is-draggable {
+  z-index: 10;
+  cursor: grabbing;
+}
+
+.component-root .is-idle[data-is-toggled] {
+  transition: 0.25s ease transform;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.connected-pattern * {
+  pointer-events: none;
+}

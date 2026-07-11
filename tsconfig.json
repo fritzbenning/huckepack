@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ES6"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+
+    "paths": {
+      "@server/*": ["./server/*"],
+      "@application/*": ["./app/_features/application/*"],
+      "@ast/*": ["./app/_features/ast/*"],
+      "@assistent/*": ["./app/_features/assistent/*"],
+      "@editor/*": ["app/_features/editor/*"],
+      "@hub/*": ["app/_features/hub/*"],
+      "@project/*": ["app/_features/project/*"],
+      "@sandpack/*": ["./app/_features/sandpack/*"],
+      "@repo/*": ["./app/_features/repo/*"],
+      "@keyboard-shortcuts": ["./app/_features/keyboard-shortcuts"],
+      "@keyboard-shortcuts/*": ["./app/_features/keyboard-shortcuts/*"],
+      "@pages/*": ["./app/pages/*"],
+      "@assets/*": ["./app/assets/*"],
+      "@hooks/*": ["./app/hooks/*"],
+      "@lib/*": ["./app/lib/*"],
+      "@stores/*": ["./app/stores/*"],
+      "@utils/*": ["./app/utils/*"],
+      "@shared/*": ["./app/shared/*"],
+      "@convex/*": ["./convex/*"],
+      "@/types/*": ["./app/types/*"],
+      "@/*": ["./app/*"]
+    }
+  },
+  "include": ["src", "**/*.ts", "**/*.tsx", "app/pages", "react-view-transition.d.ts"],
+  "exclude": ["node_modules"]
+}

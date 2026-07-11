@@ -1,0 +1,1 @@
+export { withoutTransition } from "./withoutTransition";

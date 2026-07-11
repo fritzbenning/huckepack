@@ -1,0 +1,2 @@
+export { updateTemplateLiteralTest } from "./updateTemplateLiteralTest";
+

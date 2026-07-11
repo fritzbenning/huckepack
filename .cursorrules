@@ -1,0 +1,19 @@
+# Cursor Rules
+
+## Code Documentation
+- Avoid JSDoc comments. Use minimal one-line comments only when necessary to explain code functionality.
+- Comments should explain what the code does, not why it was written or prompt-related context.
+
+## File Organization
+- Each function should be in its own file, named exactly like the function.
+- Place constants in `constants.ts` files.
+- Place types that aren't tightly coupled to a function or component in a related `types.d.ts` file.
+
+## Styling
+- Use CVA (class-variance-authority) for conditional classes instead of other approaches.
+
+## Code Structure
+- When creating new files or features, follow the existing codebase structure and patterns.
+
+## Implementation Approach
+- If unsure about a solution, ask for clarification before implementing.

@@ -1,0 +1,2 @@
+export { removeInterfaceProperty } from "./removeInterfaceProperty";
+

@@ -1,0 +1,55 @@
+import { StarIcon } from "@heroicons/react/24/solid";
+import { Button } from "../trav/Button";
+
+interface ProductCardProps {
+  name: string;
+  price: number;
+  rating: number;
+  inStock: boolean;
+  image: string;
+}
+export function ProductCard({
+  name = "Headline",
+  price = 50,
+  rating = 5,
+  inStock = true,
+  image = "https://images.unsplash.com/photo-1622351772377-c3dda74beb03",
+}: ProductCardProps) {
+  return (
+    <div
+      className="overflow-hidden rounded-3xl bg-white font-display shadow-lg transition-shadow duration-300 hover:shadow-xl"
+      data-node-id="div[0]"
+    >
+      <div className="aspect-4/3 max-h-100 w-full object-cover" data-node-id="div[0]>div[0]">
+        <img
+          src={image}
+          alt="example-image"
+          className="h-full w-full gap-10 object-cover"
+          data-node-id="div[0]>div[0]>img[0]"
+        />
+      </div>
+      <div className="flex flex-col gap-3 p-6" data-node-id="div[0]>div[1]">
+        <div className="flex flex-row flex-wrap justify-between gap-4 font-serif" data-node-id="div[0]>div[1]>div[0]">
+          <h2 className="font-bold text-3xl" data-node-id="div[0]>div[1]>div[0]>h2[0]">
+            {name}
+          </h2>
+          <p className={`text-3xl ${!inStock && "hidden"}`} data-node-id="div[0]>div[1]>div[0]>p[1]">
+            {price} €
+          </p>
+        </div>
+        <div className="mb-2 flex gap-1" data-node-id="div[0]>div[1]>div[1]">
+          {[...Array(5)].map((_, i) => (
+            <StarIcon
+              key={i}
+              className={`h-5 w-5 ${i < rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+              data-node-id="div[0]>div[1]>div[1]>StarIcon[0]"
+            />
+          ))}
+        </div>
+        <Button className="w-full" disabled={!inStock} data-node-id="div[0]>div[1]>Button[2]">
+          {inStock ? "Add to Cart" : "Out of Stock"}
+        </Button>
+      </div>
+    </div>
+  );
+}

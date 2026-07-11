@@ -1,0 +1,1 @@
+export { renameComponent } from "./renameComponent";

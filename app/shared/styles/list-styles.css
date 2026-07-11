@@ -1,0 +1,21 @@
+ul li {
+  list-style: none;
+  position: relative;
+  padding-left: 1em;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 0.25em;
+  height: 0.25em;
+  border-radius: 50%;
+  background-color: var(--color-neutral-300);
+  left: 0;
+  top: 0.6875em;
+}
+
+.dark ul li::before {
+  background-color: var(--color-neutral-500);
+}

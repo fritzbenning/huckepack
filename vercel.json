@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/web",
+  "devCommand": "vite --port 3000",
+  "framework": "vite",
+  "routes": [
+    {
+      "src": "/(.*\\.(js|jsx|ts|tsx|css|avif|webp|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|json|map|wasm))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}

@@ -1,0 +1,91 @@
+import type { KeyboardShortcutConfig } from "../types";
+
+export const sandpackShortcuts: KeyboardShortcutConfig[] = [
+  {
+    id: "sandpack.panLeft",
+    action: "panLeft",
+    keys: ["ArrowLeft"],
+    description: "Pan canvas left",
+    category: "sandpack",
+    excludeTargets: ["INPUT", "TEXTAREA"],
+  },
+  {
+    id: "sandpack.panRight",
+    action: "panRight",
+    keys: ["ArrowRight"],
+    description: "Pan canvas right",
+    category: "sandpack",
+    excludeTargets: ["INPUT", "TEXTAREA"],
+  },
+  {
+    id: "sandpack.panUp",
+    action: "panUp",
+    keys: ["ArrowUp"],
+    description: "Pan canvas up",
+    category: "sandpack",
+    excludeTargets: ["INPUT", "TEXTAREA"],
+  },
+  {
+    id: "sandpack.panDown",
+    action: "panDown",
+    keys: ["ArrowDown"],
+    description: "Pan canvas down",
+    category: "sandpack",
+    excludeTargets: ["INPUT", "TEXTAREA"],
+  },
+  {
+    id: "sandpack.zoomIn",
+    action: "zoomIn",
+    keys: ["=", "+"],
+    description: "Zoom in",
+    category: "sandpack",
+    excludeTargets: ["INPUT", "TEXTAREA"],
+  },
+  {
+    id: "sandpack.zoomOut",
+    action: "zoomOut",
+    keys: ["-"],
+    description: "Zoom out",
+    category: "sandpack",
+    excludeTargets: ["INPUT", "TEXTAREA"],
+  },
+  {
+    id: "sandpack.resetView",
+    action: "resetViewToCenter",
+    keys: ["0"],
+    modifiers: {
+      metaKey: true,
+      ctrlKey: true,
+    },
+    description: "Reset view to center",
+    category: "sandpack",
+    excludeTargets: ["INPUT", "TEXTAREA"],
+  },
+  {
+    id: "sandpack.toggleGrid",
+    action: "toggleGrid",
+    keys: ["g", "G"],
+    modifiers: {
+      shiftKey: true,
+    },
+    description: "Toggle grid",
+    category: "sandpack",
+    excludeTargets: ["INPUT", "TEXTAREA"],
+  },
+  {
+    id: "sandpack.toggleRulers",
+    action: "toggleRulers",
+    keys: ["r", "R"],
+    modifiers: {
+      shiftKey: true,
+    },
+    excludeModifiers: {
+      metaKey: true,
+      ctrlKey: true,
+      altKey: true,
+    },
+    description: "Toggle rulers",
+    category: "sandpack",
+    excludeTargets: ["INPUT", "TEXTAREA"],
+  },
+];

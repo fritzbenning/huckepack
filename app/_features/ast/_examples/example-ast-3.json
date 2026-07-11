@@ -1,0 +1,1533 @@
+{
+    "type": "Module",
+    "span": {
+        "start": 4652,
+        "end": 6144
+    },
+    "body": [
+        {
+            "type": "ImportDeclaration",
+            "span": {
+                "start": 4652,
+                "end": 4711
+            },
+            "specifiers": [
+                {
+                    "type": "ImportSpecifier",
+                    "span": {
+                        "start": 4661,
+                        "end": 4676
+                    },
+                    "local": {
+                        "type": "Identifier",
+                        "span": {
+                            "start": 4661,
+                            "end": 4676
+                        },
+                        "ctxt": 2,
+                        "value": "ShoppingBagIcon",
+                        "optional": false
+                    },
+                    "imported": null,
+                    "isTypeOnly": false
+                }
+            ],
+            "source": {
+                "type": "StringLiteral",
+                "span": {
+                    "start": 4684,
+                    "end": 4711
+                },
+                "value": "@heroicons/react/24/solid",
+                "raw": "\"@heroicons/react/24/solid\""
+            },
+            "typeOnly": false,
+            "with": null,
+            "phase": "evaluation",
+            "asserts": null
+        },
+        {
+            "type": "ImportDeclaration",
+            "span": {
+                "start": 4712,
+                "end": 4750
+            },
+            "specifiers": [
+                {
+                    "type": "ImportSpecifier",
+                    "span": {
+                        "start": 4721,
+                        "end": 4735
+                    },
+                    "local": {
+                        "type": "Identifier",
+                        "span": {
+                            "start": 4726,
+                            "end": 4735
+                        },
+                        "ctxt": 2,
+                        "value": "ReactNode",
+                        "optional": false
+                    },
+                    "imported": null,
+                    "isTypeOnly": true
+                }
+            ],
+            "source": {
+                "type": "StringLiteral",
+                "span": {
+                    "start": 4743,
+                    "end": 4750
+                },
+                "value": "react",
+                "raw": "\"react\""
+            },
+            "typeOnly": false,
+            "with": null,
+            "phase": "evaluation",
+            "asserts": null
+        },
+        {
+            "type": "TsInterfaceDeclaration",
+            "span": {
+                "start": 4751,
+                "end": 4937
+            },
+            "id": {
+                "type": "Identifier",
+                "span": {
+                    "start": 4761,
+                    "end": 4772
+                },
+                "ctxt": 2,
+                "value": "ButtonProps",
+                "optional": false
+            },
+            "declare": false,
+            "typeParams": null,
+            "extends": [],
+            "body": {
+                "type": "TsInterfaceBody",
+                "span": {
+                    "start": 4773,
+                    "end": 4937
+                },
+                "body": [
+                    {
+                        "type": "TsPropertySignature",
+                        "span": {
+                            "start": 4777,
+                            "end": 4793
+                        },
+                        "readonly": false,
+                        "key": {
+                            "type": "Identifier",
+                            "span": {
+                                "start": 4777,
+                                "end": 4785
+                            },
+                            "ctxt": 0,
+                            "value": "children",
+                            "optional": false
+                        },
+                        "computed": false,
+                        "optional": false,
+                        "typeAnnotation": {
+                            "type": "TsTypeAnnotation",
+                            "span": {
+                                "start": 4785,
+                                "end": 4793
+                            },
+                            "typeAnnotation": {
+                                "type": "TsKeywordType",
+                                "span": {
+                                    "start": 4787,
+                                    "end": 4793
+                                },
+                                "kind": "string"
+                            }
+                        }
+                    },
+                    {
+                        "type": "TsPropertySignature",
+                        "span": {
+                            "start": 4796,
+                            "end": 4842
+                        },
+                        "readonly": false,
+                        "key": {
+                            "type": "Identifier",
+                            "span": {
+                                "start": 4796,
+                                "end": 4803
+                            },
+                            "ctxt": 0,
+                            "value": "variant",
+                            "optional": false
+                        },
+                        "computed": false,
+                        "optional": true,
+                        "typeAnnotation": {
+                            "type": "TsTypeAnnotation",
+                            "span": {
+                                "start": 4804,
+                                "end": 4842
+                            },
+                            "typeAnnotation": {
+                                "type": "TsUnionType",
+                                "span": {
+                                    "start": 4806,
+                                    "end": 4842
+                                },
+                                "types": [
+                                    {
+                                        "type": "TsLiteralType",
+                                        "span": {
+                                            "start": 4806,
+                                            "end": 4815
+                                        },
+                                        "literal": {
+                                            "type": "StringLiteral",
+                                            "span": {
+                                                "start": 4806,
+                                                "end": 4815
+                                            },
+                                            "value": "primary",
+                                            "raw": "\"primary\""
+                                        }
+                                    },
+                                    {
+                                        "type": "TsLiteralType",
+                                        "span": {
+                                            "start": 4818,
+                                            "end": 4829
+                                        },
+                                        "literal": {
+                                            "type": "StringLiteral",
+                                            "span": {
+                                                "start": 4818,
+                                                "end": 4829
+                                            },
+                                            "value": "secondary",
+                                            "raw": "\"secondary\""
+                                        }
+                                    },
+                                    {
+                                        "type": "TsLiteralType",
+                                        "span": {
+                                            "start": 4832,
+                                            "end": 4842
+                                        },
+                                        "literal": {
+                                            "type": "StringLiteral",
+                                            "span": {
+                                                "start": 4832,
+                                                "end": 4842
+                                            },
+                                            "value": "disabled",
+                                            "raw": "\"disabled\""
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "type": "TsPropertySignature",
+                        "span": {
+                            "start": 4845,
+                            "end": 4870
+                        },
+                        "readonly": false,
+                        "key": {
+                            "type": "Identifier",
+                            "span": {
+                                "start": 4845,
+                                "end": 4849
+                            },
+                            "ctxt": 0,
+                            "value": "size",
+                            "optional": false
+                        },
+                        "computed": false,
+                        "optional": true,
+                        "typeAnnotation": {
+                            "type": "TsTypeAnnotation",
+                            "span": {
+                                "start": 4850,
+                                "end": 4870
+                            },
+                            "typeAnnotation": {
+                                "type": "TsUnionType",
+                                "span": {
+                                    "start": 4852,
+                                    "end": 4870
+                                },
+                                "types": [
+                                    {
+                                        "type": "TsLiteralType",
+                                        "span": {
+                                            "start": 4852,
+                                            "end": 4856
+                                        },
+                                        "literal": {
+                                            "type": "StringLiteral",
+                                            "span": {
+                                                "start": 4852,
+                                                "end": 4856
+                                            },
+                                            "value": "sm",
+                                            "raw": "\"sm\""
+                                        }
+                                    },
+                                    {
+                                        "type": "TsLiteralType",
+                                        "span": {
+                                            "start": 4859,
+                                            "end": 4863
+                                        },
+                                        "literal": {
+                                            "type": "StringLiteral",
+                                            "span": {
+                                                "start": 4859,
+                                                "end": 4863
+                                            },
+                                            "value": "md",
+                                            "raw": "\"md\""
+                                        }
+                                    },
+                                    {
+                                        "type": "TsLiteralType",
+                                        "span": {
+                                            "start": 4866,
+                                            "end": 4870
+                                        },
+                                        "literal": {
+                                            "type": "StringLiteral",
+                                            "span": {
+                                                "start": 4866,
+                                                "end": 4870
+                                            },
+                                            "value": "lg",
+                                            "raw": "\"lg\""
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "type": "TsPropertySignature",
+                        "span": {
+                            "start": 4873,
+                            "end": 4891
+                        },
+                        "readonly": false,
+                        "key": {
+                            "type": "Identifier",
+                            "span": {
+                                "start": 4873,
+                                "end": 4881
+                            },
+                            "ctxt": 0,
+                            "value": "disabled",
+                            "optional": false
+                        },
+                        "computed": false,
+                        "optional": true,
+                        "typeAnnotation": {
+                            "type": "TsTypeAnnotation",
+                            "span": {
+                                "start": 4882,
+                                "end": 4891
+                            },
+                            "typeAnnotation": {
+                                "type": "TsKeywordType",
+                                "span": {
+                                    "start": 4884,
+                                    "end": 4891
+                                },
+                                "kind": "boolean"
+                            }
+                        }
+                    },
+                    {
+                        "type": "TsPropertySignature",
+                        "span": {
+                            "start": 4894,
+                            "end": 4914
+                        },
+                        "readonly": false,
+                        "key": {
+                            "type": "Identifier",
+                            "span": {
+                                "start": 4894,
+                                "end": 4901
+                            },
+                            "ctxt": 0,
+                            "value": "onClick",
+                            "optional": false
+                        },
+                        "computed": false,
+                        "optional": true,
+                        "typeAnnotation": {
+                            "type": "TsTypeAnnotation",
+                            "span": {
+                                "start": 4902,
+                                "end": 4914
+                            },
+                            "typeAnnotation": {
+                                "type": "TsFunctionType",
+                                "span": {
+                                    "start": 4904,
+                                    "end": 4914
+                                },
+                                "params": [],
+                                "typeParams": null,
+                                "typeAnnotation": {
+                                    "type": "TsTypeAnnotation",
+                                    "span": {
+                                        "start": 4907,
+                                        "end": 4914
+                                    },
+                                    "typeAnnotation": {
+                                        "type": "TsKeywordType",
+                                        "span": {
+                                            "start": 4910,
+                                            "end": 4914
+                                        },
+                                        "kind": "void"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "type": "TsPropertySignature",
+                        "span": {
+                            "start": 4917,
+                            "end": 4935
+                        },
+                        "readonly": false,
+                        "key": {
+                            "type": "Identifier",
+                            "span": {
+                                "start": 4917,
+                                "end": 4926
+                            },
+                            "ctxt": 0,
+                            "value": "className",
+                            "optional": false
+                        },
+                        "computed": false,
+                        "optional": true,
+                        "typeAnnotation": {
+                            "type": "TsTypeAnnotation",
+                            "span": {
+                                "start": 4927,
+                                "end": 4935
+                            },
+                            "typeAnnotation": {
+                                "type": "TsKeywordType",
+                                "span": {
+                                    "start": 4929,
+                                    "end": 4935
+                                },
+                                "kind": "string"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ExportDeclaration",
+            "span": {
+                "start": 4938,
+                "end": 6144
+            },
+            "declaration": {
+                "type": "FunctionDeclaration",
+                "identifier": {
+                    "type": "Identifier",
+                    "span": {
+                        "start": 4954,
+                        "end": 4960
+                    },
+                    "ctxt": 2,
+                    "value": "Button",
+                    "optional": false
+                },
+                "declare": false,
+                "params": [
+                    {
+                        "type": "Parameter",
+                        "span": {
+                            "start": 4964,
+                            "end": 5121
+                        },
+                        "decorators": [],
+                        "pat": {
+                            "type": "ObjectPattern",
+                            "span": {
+                                "start": 4964,
+                                "end": 5121
+                            },
+                            "properties": [
+                                {
+                                    "type": "AssignmentPatternProperty",
+                                    "span": {
+                                        "start": 4970,
+                                        "end": 4989
+                                    },
+                                    "key": {
+                                        "type": "Identifier",
+                                        "span": {
+                                            "start": 4970,
+                                            "end": 4978
+                                        },
+                                        "ctxt": 3,
+                                        "value": "children",
+                                        "optional": false,
+                                        "typeAnnotation": null
+                                    },
+                                    "value": {
+                                        "type": "StringLiteral",
+                                        "span": {
+                                            "start": 4981,
+                                            "end": 4989
+                                        },
+                                        "value": "Button",
+                                        "raw": "\"Button\""
+                                    }
+                                },
+                                {
+                                    "type": "AssignmentPatternProperty",
+                                    "span": {
+                                        "start": 4995,
+                                        "end": 5014
+                                    },
+                                    "key": {
+                                        "type": "Identifier",
+                                        "span": {
+                                            "start": 4995,
+                                            "end": 5002
+                                        },
+                                        "ctxt": 3,
+                                        "value": "variant",
+                                        "optional": false,
+                                        "typeAnnotation": null
+                                    },
+                                    "value": {
+                                        "type": "StringLiteral",
+                                        "span": {
+                                            "start": 5005,
+                                            "end": 5014
+                                        },
+                                        "value": "primary",
+                                        "raw": "\"primary\""
+                                    }
+                                },
+                                {
+                                    "type": "AssignmentPatternProperty",
+                                    "span": {
+                                        "start": 5020,
+                                        "end": 5031
+                                    },
+                                    "key": {
+                                        "type": "Identifier",
+                                        "span": {
+                                            "start": 5020,
+                                            "end": 5024
+                                        },
+                                        "ctxt": 3,
+                                        "value": "size",
+                                        "optional": false,
+                                        "typeAnnotation": null
+                                    },
+                                    "value": {
+                                        "type": "StringLiteral",
+                                        "span": {
+                                            "start": 5027,
+                                            "end": 5031
+                                        },
+                                        "value": "sm",
+                                        "raw": "\"sm\""
+                                    }
+                                },
+                                {
+                                    "type": "AssignmentPatternProperty",
+                                    "span": {
+                                        "start": 5037,
+                                        "end": 5053
+                                    },
+                                    "key": {
+                                        "type": "Identifier",
+                                        "span": {
+                                            "start": 5037,
+                                            "end": 5045
+                                        },
+                                        "ctxt": 3,
+                                        "value": "disabled",
+                                        "optional": false,
+                                        "typeAnnotation": null
+                                    },
+                                    "value": {
+                                        "type": "BooleanLiteral",
+                                        "span": {
+                                            "start": 5048,
+                                            "end": 5053
+                                        },
+                                        "value": false
+                                    }
+                                },
+                                {
+                                    "type": "AssignmentPatternProperty",
+                                    "span": {
+                                        "start": 5059,
+                                        "end": 5066
+                                    },
+                                    "key": {
+                                        "type": "Identifier",
+                                        "span": {
+                                            "start": 5059,
+                                            "end": 5066
+                                        },
+                                        "ctxt": 3,
+                                        "value": "onClick",
+                                        "optional": false,
+                                        "typeAnnotation": null
+                                    },
+                                    "value": null
+                                },
+                                {
+                                    "type": "AssignmentPatternProperty",
+                                    "span": {
+                                        "start": 5072,
+                                        "end": 5086
+                                    },
+                                    "key": {
+                                        "type": "Identifier",
+                                        "span": {
+                                            "start": 5072,
+                                            "end": 5081
+                                        },
+                                        "ctxt": 3,
+                                        "value": "className",
+                                        "optional": false,
+                                        "typeAnnotation": null
+                                    },
+                                    "value": {
+                                        "type": "StringLiteral",
+                                        "span": {
+                                            "start": 5084,
+                                            "end": 5086
+                                        },
+                                        "value": "",
+                                        "raw": "\"\""
+                                    }
+                                },
+                                {
+                                    "type": "RestElement",
+                                    "span": {
+                                        "start": 5092,
+                                        "end": 5104
+                                    },
+                                    "rest": {
+                                        "start": 5092,
+                                        "end": 5095
+                                    },
+                                    "argument": {
+                                        "type": "Identifier",
+                                        "span": {
+                                            "start": 5095,
+                                            "end": 5104
+                                        },
+                                        "ctxt": 3,
+                                        "value": "restProps",
+                                        "optional": false,
+                                        "typeAnnotation": null
+                                    },
+                                    "typeAnnotation": null
+                                }
+                            ],
+                            "optional": false,
+                            "typeAnnotation": {
+                                "type": "TsTypeAnnotation",
+                                "span": {
+                                    "start": 5108,
+                                    "end": 5121
+                                },
+                                "typeAnnotation": {
+                                    "type": "TsTypeReference",
+                                    "span": {
+                                        "start": 5110,
+                                        "end": 5121
+                                    },
+                                    "typeName": {
+                                        "type": "Identifier",
+                                        "span": {
+                                            "start": 5110,
+                                            "end": 5121
+                                        },
+                                        "ctxt": 2,
+                                        "value": "ButtonProps",
+                                        "optional": false
+                                    },
+                                    "typeParams": null
+                                }
+                            }
+                        }
+                    }
+                ],
+                "decorators": [],
+                "span": {
+                    "start": 4945,
+                    "end": 6144
+                },
+                "ctxt": 3,
+                "body": {
+                    "type": "BlockStatement",
+                    "span": {
+                        "start": 5125,
+                        "end": 6144
+                    },
+                    "ctxt": 3,
+                    "stmts": [
+                        {
+                            "type": "VariableDeclaration",
+                            "span": {
+                                "start": 5129,
+                                "end": 5261
+                            },
+                            "ctxt": 0,
+                            "kind": "const",
+                            "declare": false,
+                            "declarations": [
+                                {
+                                    "type": "VariableDeclarator",
+                                    "span": {
+                                        "start": 5135,
+                                        "end": 5261
+                                    },
+                                    "id": {
+                                        "type": "Identifier",
+                                        "span": {
+                                            "start": 5135,
+                                            "end": 5146
+                                        },
+                                        "ctxt": 3,
+                                        "value": "baseClasses",
+                                        "optional": false,
+                                        "typeAnnotation": null
+                                    },
+                                    "init": {
+                                        "type": "StringLiteral",
+                                        "span": {
+                                            "start": 5153,
+                                            "end": 5261
+                                        },
+                                        "value": "flex items-center justify-center gap-2 rounded-lg font-semibold transition-all shadow-lg whitespace-nowrap",
+                                        "raw": "\"flex items-center justify-center gap-2 rounded-lg font-semibold transition-all shadow-lg whitespace-nowrap\""
+                                    },
+                                    "definite": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "span": {
+                                "start": 5264,
+                                "end": 5508
+                            },
+                            "ctxt": 0,
+                            "kind": "const",
+                            "declare": false,
+                            "declarations": [
+                                {
+                                    "type": "VariableDeclarator",
+                                    "span": {
+                                        "start": 5270,
+                                        "end": 5508
+                                    },
+                                    "id": {
+                                        "type": "Identifier",
+                                        "span": {
+                                            "start": 5270,
+                                            "end": 5284
+                                        },
+                                        "ctxt": 3,
+                                        "value": "variantClasses",
+                                        "optional": false,
+                                        "typeAnnotation": null
+                                    },
+                                    "init": {
+                                        "type": "ObjectExpression",
+                                        "span": {
+                                            "start": 5287,
+                                            "end": 5508
+                                        },
+                                        "properties": [
+                                            {
+                                                "type": "KeyValueProperty",
+                                                "key": {
+                                                    "type": "Identifier",
+                                                    "span": {
+                                                        "start": 5293,
+                                                        "end": 5300
+                                                    },
+                                                    "value": "primary"
+                                                },
+                                                "value": {
+                                                    "type": "StringLiteral",
+                                                    "span": {
+                                                        "start": 5308,
+                                                        "end": 5382
+                                                    },
+                                                    "value": "bg-gradient-to-r from-primary to-teal-600 hover:brightness-90 text-white",
+                                                    "raw": "\"bg-gradient-to-r from-primary to-teal-600 hover:brightness-90 text-white\""
+                                                }
+                                            },
+                                            {
+                                                "type": "KeyValueProperty",
+                                                "key": {
+                                                    "type": "Identifier",
+                                                    "span": {
+                                                        "start": 5388,
+                                                        "end": 5397
+                                                    },
+                                                    "value": "secondary"
+                                                },
+                                                "value": {
+                                                    "type": "StringLiteral",
+                                                    "span": {
+                                                        "start": 5399,
+                                                        "end": 5444
+                                                    },
+                                                    "value": "bg-gray-200 hover:bg-gray-300 text-gray-800",
+                                                    "raw": "\"bg-gray-200 hover:bg-gray-300 text-gray-800\""
+                                                }
+                                            },
+                                            {
+                                                "type": "KeyValueProperty",
+                                                "key": {
+                                                    "type": "Identifier",
+                                                    "span": {
+                                                        "start": 5450,
+                                                        "end": 5458
+                                                    },
+                                                    "value": "disabled"
+                                                },
+                                                "value": {
+                                                    "type": "StringLiteral",
+                                                    "span": {
+                                                        "start": 5460,
+                                                        "end": 5503
+                                                    },
+                                                    "value": "bg-gray-400 cursor-not-allowed text-white",
+                                                    "raw": "\"bg-gray-400 cursor-not-allowed text-white\""
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "definite": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "span": {
+                                "start": 5511,
+                                "end": 5625
+                            },
+                            "ctxt": 0,
+                            "kind": "const",
+                            "declare": false,
+                            "declarations": [
+                                {
+                                    "type": "VariableDeclarator",
+                                    "span": {
+                                        "start": 5517,
+                                        "end": 5625
+                                    },
+                                    "id": {
+                                        "type": "Identifier",
+                                        "span": {
+                                            "start": 5517,
+                                            "end": 5528
+                                        },
+                                        "ctxt": 3,
+                                        "value": "sizeClasses",
+                                        "optional": false,
+                                        "typeAnnotation": null
+                                    },
+                                    "init": {
+                                        "type": "ObjectExpression",
+                                        "span": {
+                                            "start": 5531,
+                                            "end": 5625
+                                        },
+                                        "properties": [
+                                            {
+                                                "type": "KeyValueProperty",
+                                                "key": {
+                                                    "type": "Identifier",
+                                                    "span": {
+                                                        "start": 5537,
+                                                        "end": 5539
+                                                    },
+                                                    "value": "sm"
+                                                },
+                                                "value": {
+                                                    "type": "StringLiteral",
+                                                    "span": {
+                                                        "start": 5541,
+                                                        "end": 5560
+                                                    },
+                                                    "value": "px-3 py-2 text-xs",
+                                                    "raw": "\"px-3 py-2 text-xs\""
+                                                }
+                                            },
+                                            {
+                                                "type": "KeyValueProperty",
+                                                "key": {
+                                                    "type": "Identifier",
+                                                    "span": {
+                                                        "start": 5566,
+                                                        "end": 5568
+                                                    },
+                                                    "value": "md"
+                                                },
+                                                "value": {
+                                                    "type": "StringLiteral",
+                                                    "span": {
+                                                        "start": 5570,
+                                                        "end": 5589
+                                                    },
+                                                    "value": "px-4 py-3 text-sm",
+                                                    "raw": "\"px-4 py-3 text-sm\""
+                                                }
+                                            },
+                                            {
+                                                "type": "KeyValueProperty",
+                                                "key": {
+                                                    "type": "Identifier",
+                                                    "span": {
+                                                        "start": 5595,
+                                                        "end": 5597
+                                                    },
+                                                    "value": "lg"
+                                                },
+                                                "value": {
+                                                    "type": "StringLiteral",
+                                                    "span": {
+                                                        "start": 5599,
+                                                        "end": 5620
+                                                    },
+                                                    "value": "px-6 py-4 text-base",
+                                                    "raw": "\"px-6 py-4 text-base\""
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "definite": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "span": {
+                                "start": 5628,
+                                "end": 5680
+                            },
+                            "ctxt": 0,
+                            "kind": "const",
+                            "declare": false,
+                            "declarations": [
+                                {
+                                    "type": "VariableDeclarator",
+                                    "span": {
+                                        "start": 5634,
+                                        "end": 5680
+                                    },
+                                    "id": {
+                                        "type": "Identifier",
+                                        "span": {
+                                            "start": 5634,
+                                            "end": 5646
+                                        },
+                                        "ctxt": 3,
+                                        "value": "finalVariant",
+                                        "optional": false,
+                                        "typeAnnotation": null
+                                    },
+                                    "init": {
+                                        "type": "ConditionalExpression",
+                                        "span": {
+                                            "start": 5649,
+                                            "end": 5680
+                                        },
+                                        "test": {
+                                            "type": "Identifier",
+                                            "span": {
+                                                "start": 5649,
+                                                "end": 5657
+                                            },
+                                            "ctxt": 3,
+                                            "value": "disabled",
+                                            "optional": false
+                                        },
+                                        "consequent": {
+                                            "type": "StringLiteral",
+                                            "span": {
+                                                "start": 5660,
+                                                "end": 5670
+                                            },
+                                            "value": "disabled",
+                                            "raw": "\"disabled\""
+                                        },
+                                        "alternate": {
+                                            "type": "Identifier",
+                                            "span": {
+                                                "start": 5673,
+                                                "end": 5680
+                                            },
+                                            "ctxt": 3,
+                                            "value": "variant",
+                                            "optional": false
+                                        }
+                                    },
+                                    "definite": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "span": {
+                                "start": 5683,
+                                "end": 5789
+                            },
+                            "ctxt": 0,
+                            "kind": "const",
+                            "declare": false,
+                            "declarations": [
+                                {
+                                    "type": "VariableDeclarator",
+                                    "span": {
+                                        "start": 5689,
+                                        "end": 5789
+                                    },
+                                    "id": {
+                                        "type": "Identifier",
+                                        "span": {
+                                            "start": 5689,
+                                            "end": 5696
+                                        },
+                                        "ctxt": 3,
+                                        "value": "classes",
+                                        "optional": false,
+                                        "typeAnnotation": null
+                                    },
+                                    "init": {
+                                        "type": "TemplateLiteral",
+                                        "span": {
+                                            "start": 5699,
+                                            "end": 5789
+                                        },
+                                        "expressions": [
+                                            {
+                                                "type": "Identifier",
+                                                "span": {
+                                                    "start": 5702,
+                                                    "end": 5713
+                                                },
+                                                "ctxt": 3,
+                                                "value": "baseClasses",
+                                                "optional": false
+                                            },
+                                            {
+                                                "type": "MemberExpression",
+                                                "span": {
+                                                    "start": 5717,
+                                                    "end": 5745
+                                                },
+                                                "object": {
+                                                    "type": "Identifier",
+                                                    "span": {
+                                                        "start": 5717,
+                                                        "end": 5731
+                                                    },
+                                                    "ctxt": 3,
+                                                    "value": "variantClasses",
+                                                    "optional": false
+                                                },
+                                                "property": {
+                                                    "type": "Computed",
+                                                    "span": {
+                                                        "start": 5731,
+                                                        "end": 5745
+                                                    },
+                                                    "expression": {
+                                                        "type": "Identifier",
+                                                        "span": {
+                                                            "start": 5732,
+                                                            "end": 5744
+                                                        },
+                                                        "ctxt": 3,
+                                                        "value": "finalVariant",
+                                                        "optional": false
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "MemberExpression",
+                                                "span": {
+                                                    "start": 5754,
+                                                    "end": 5771
+                                                },
+                                                "object": {
+                                                    "type": "Identifier",
+                                                    "span": {
+                                                        "start": 5754,
+                                                        "end": 5765
+                                                    },
+                                                    "ctxt": 3,
+                                                    "value": "sizeClasses",
+                                                    "optional": false
+                                                },
+                                                "property": {
+                                                    "type": "Computed",
+                                                    "span": {
+                                                        "start": 5765,
+                                                        "end": 5771
+                                                    },
+                                                    "expression": {
+                                                        "type": "Identifier",
+                                                        "span": {
+                                                            "start": 5766,
+                                                            "end": 5770
+                                                        },
+                                                        "ctxt": 3,
+                                                        "value": "size",
+                                                        "optional": false
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "Identifier",
+                                                "span": {
+                                                    "start": 5778,
+                                                    "end": 5787
+                                                },
+                                                "ctxt": 3,
+                                                "value": "className",
+                                                "optional": false
+                                            }
+                                        ],
+                                        "quasis": [
+                                            {
+                                                "type": "TemplateElement",
+                                                "span": {
+                                                    "start": 5700,
+                                                    "end": 5700
+                                                },
+                                                "tail": false,
+                                                "cooked": "",
+                                                "raw": ""
+                                            },
+                                            {
+                                                "type": "TemplateElement",
+                                                "span": {
+                                                    "start": 5714,
+                                                    "end": 5715
+                                                },
+                                                "tail": false,
+                                                "cooked": " ",
+                                                "raw": " "
+                                            },
+                                            {
+                                                "type": "TemplateElement",
+                                                "span": {
+                                                    "start": 5746,
+                                                    "end": 5747
+                                                },
+                                                "tail": false,
+                                                "cooked": " ",
+                                                "raw": " "
+                                            },
+                                            {
+                                                "type": "TemplateElement",
+                                                "span": {
+                                                    "start": 5775,
+                                                    "end": 5776
+                                                },
+                                                "tail": false,
+                                                "cooked": " ",
+                                                "raw": " "
+                                            },
+                                            {
+                                                "type": "TemplateElement",
+                                                "span": {
+                                                    "start": 5788,
+                                                    "end": 5788
+                                                },
+                                                "tail": true,
+                                                "cooked": "",
+                                                "raw": ""
+                                            }
+                                        ]
+                                    },
+                                    "definite": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "span": {
+                                "start": 5792,
+                                "end": 6142
+                            },
+                            "argument": {
+                                "type": "ParenthesisExpression",
+                                "span": {
+                                    "start": 5799,
+                                    "end": 6142
+                                },
+                                "expression": {
+                                    "type": "JSXElement",
+                                    "span": {
+                                        "start": 5805,
+                                        "end": 6138
+                                    },
+                                    "opening": {
+                                        "type": "JSXOpeningElement",
+                                        "name": {
+                                            "type": "Identifier",
+                                            "span": {
+                                                "start": 5806,
+                                                "end": 5812
+                                            },
+                                            "ctxt": 1,
+                                            "value": "button",
+                                            "optional": false
+                                        },
+                                        "span": {
+                                            "start": 5805,
+                                            "end": 5922
+                                        },
+                                        "attributes": [
+                                            {
+                                                "type": "JSXAttribute",
+                                                "span": {
+                                                    "start": 5819,
+                                                    "end": 5838
+                                                },
+                                                "name": {
+                                                    "type": "Identifier",
+                                                    "span": {
+                                                        "start": 5819,
+                                                        "end": 5828
+                                                    },
+                                                    "value": "className"
+                                                },
+                                                "value": {
+                                                    "type": "JSXExpressionContainer",
+                                                    "span": {
+                                                        "start": 5829,
+                                                        "end": 5838
+                                                    },
+                                                    "expression": {
+                                                        "type": "Identifier",
+                                                        "span": {
+                                                            "start": 5830,
+                                                            "end": 5837
+                                                        },
+                                                        "ctxt": 3,
+                                                        "value": "classes",
+                                                        "optional": false
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "JSXAttribute",
+                                                "span": {
+                                                    "start": 5845,
+                                                    "end": 5864
+                                                },
+                                                "name": {
+                                                    "type": "Identifier",
+                                                    "span": {
+                                                        "start": 5845,
+                                                        "end": 5853
+                                                    },
+                                                    "value": "disabled"
+                                                },
+                                                "value": {
+                                                    "type": "JSXExpressionContainer",
+                                                    "span": {
+                                                        "start": 5854,
+                                                        "end": 5864
+                                                    },
+                                                    "expression": {
+                                                        "type": "Identifier",
+                                                        "span": {
+                                                            "start": 5855,
+                                                            "end": 5863
+                                                        },
+                                                        "ctxt": 3,
+                                                        "value": "disabled",
+                                                        "optional": false
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "JSXAttribute",
+                                                "span": {
+                                                    "start": 5871,
+                                                    "end": 5895
+                                                },
+                                                "name": {
+                                                    "type": "Identifier",
+                                                    "span": {
+                                                        "start": 5871,
+                                                        "end": 5883
+                                                    },
+                                                    "value": "data-node-id"
+                                                },
+                                                "value": {
+                                                    "type": "StringLiteral",
+                                                    "span": {
+                                                        "start": 5884,
+                                                        "end": 5895
+                                                    },
+                                                    "value": "button[0]",
+                                                    "raw": "\"button[0]\""
+                                                }
+                                            },
+                                            {
+                                                "type": "SpreadElement",
+                                                "spread": {
+                                                    "start": 5903,
+                                                    "end": 5906
+                                                },
+                                                "arguments": {
+                                                    "type": "Identifier",
+                                                    "span": {
+                                                        "start": 5906,
+                                                        "end": 5915
+                                                    },
+                                                    "ctxt": 3,
+                                                    "value": "restProps",
+                                                    "optional": false
+                                                }
+                                            }
+                                        ],
+                                        "selfClosing": false,
+                                        "typeArguments": null
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "JSXText",
+                                            "span": {
+                                                "start": 5922,
+                                                "end": 5929
+                                            },
+                                            "value": "\n      ",
+                                            "raw": "\n      "
+                                        },
+                                        {
+                                            "type": "JSXElement",
+                                            "span": {
+                                                "start": 5929,
+                                                "end": 6107
+                                            },
+                                            "opening": {
+                                                "type": "JSXOpeningElement",
+                                                "name": {
+                                                    "type": "Identifier",
+                                                    "span": {
+                                                        "start": 5930,
+                                                        "end": 5945
+                                                    },
+                                                    "ctxt": 2,
+                                                    "value": "ShoppingBagIcon",
+                                                    "optional": false
+                                                },
+                                                "span": {
+                                                    "start": 5929,
+                                                    "end": 6107
+                                                },
+                                                "attributes": [
+                                                    {
+                                                        "type": "JSXAttribute",
+                                                        "span": {
+                                                            "start": 5954,
+                                                            "end": 5972
+                                                        },
+                                                        "name": {
+                                                            "type": "Identifier",
+                                                            "span": {
+                                                                "start": 5954,
+                                                                "end": 5963
+                                                            },
+                                                            "value": "className"
+                                                        },
+                                                        "value": {
+                                                            "type": "StringLiteral",
+                                                            "span": {
+                                                                "start": 5964,
+                                                                "end": 5972
+                                                            },
+                                                            "value": "size-4",
+                                                            "raw": "\"size-4\""
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "JSXAttribute",
+                                                        "span": {
+                                                            "start": 5981,
+                                                            "end": 6024
+                                                        },
+                                                        "name": {
+                                                            "type": "Identifier",
+                                                            "span": {
+                                                                "start": 5981,
+                                                                "end": 5993
+                                                            },
+                                                            "value": "data-node-id"
+                                                        },
+                                                        "value": {
+                                                            "type": "StringLiteral",
+                                                            "span": {
+                                                                "start": 158122860,
+                                                                "end": 158122890,
+                                                                "ctxt": 0
+                                                            },
+                                                            "value": "button[0]>ShoppingBagIcon[0]",
+                                                            "raw": "\"button[0]>ShoppingBagIcon[0]\""
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "JSXAttribute",
+                                                        "span": {
+                                                            "start": 6033,
+                                                            "end": 6053
+                                                        },
+                                                        "name": {
+                                                            "type": "Identifier",
+                                                            "span": {
+                                                                "start": 6033,
+                                                                "end": 6046
+                                                            },
+                                                            "value": "data-instance"
+                                                        },
+                                                        "value": {
+                                                            "type": "StringLiteral",
+                                                            "span": {
+                                                                "start": 158122860,
+                                                                "end": 158122866,
+                                                                "ctxt": 0
+                                                            },
+                                                            "value": "true",
+                                                            "raw": "\"true\""
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "JSXAttribute",
+                                                        "span": {
+                                                            "start": 6062,
+                                                            "end": 6098
+                                                        },
+                                                        "name": {
+                                                            "type": "Identifier",
+                                                            "span": {
+                                                                "start": 6062,
+                                                                "end": 6080
+                                                            },
+                                                            "value": "data-instance-name"
+                                                        },
+                                                        "value": {
+                                                            "type": "StringLiteral",
+                                                            "span": {
+                                                                "start": 158122860,
+                                                                "end": 158122877,
+                                                                "ctxt": 0
+                                                            },
+                                                            "value": "ShoppingBagIcon",
+                                                            "raw": "\"ShoppingBagIcon\""
+                                                        }
+                                                    }
+                                                ],
+                                                "selfClosing": true,
+                                                "typeArguments": null
+                                            },
+                                            "children": [],
+                                            "closing": null
+                                        },
+                                        {
+                                            "type": "JSXText",
+                                            "span": {
+                                                "start": 6107,
+                                                "end": 6114
+                                            },
+                                            "value": "\n      ",
+                                            "raw": "\n      "
+                                        },
+                                        {
+                                            "type": "JSXExpressionContainer",
+                                            "span": {
+                                                "start": 6114,
+                                                "end": 6124
+                                            },
+                                            "expression": {
+                                                "type": "Identifier",
+                                                "span": {
+                                                    "start": 6115,
+                                                    "end": 6123
+                                                },
+                                                "ctxt": 3,
+                                                "value": "children",
+                                                "optional": false
+                                            }
+                                        },
+                                        {
+                                            "type": "JSXText",
+                                            "span": {
+                                                "start": 6124,
+                                                "end": 6129
+                                            },
+                                            "value": "\n    ",
+                                            "raw": "\n    "
+                                        }
+                                    ],
+                                    "closing": {
+                                        "type": "JSXClosingElement",
+                                        "span": {
+                                            "start": 6129,
+                                            "end": 6138
+                                        },
+                                        "name": {
+                                            "type": "Identifier",
+                                            "span": {
+                                                "start": 6131,
+                                                "end": 6137
+                                            },
+                                            "ctxt": 1,
+                                            "value": "button",
+                                            "optional": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                "generator": false,
+                "async": false,
+                "typeParameters": null,
+                "returnType": null
+            }
+        }
+    ],
+    "interpreter": null
+}

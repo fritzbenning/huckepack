@@ -1,0 +1,1 @@
+export { isColorFeature } from "./isColorFeature";
