@@ -29,11 +29,11 @@ export const pinnedModalRegistry = {
   },
   "design-panel.color-picker": {
     component: ColorPickerModal,
-    defaultProps: {},
+    defaultProps: { featurePrefix: "backgroundColor", title: "Background Color" },
   },
   "design-panel.text-color-picker": {
     component: ColorPickerModal,
-    defaultProps: {},
+    defaultProps: { featurePrefix: "textColor", title: "Text Color" },
   },
 } as const satisfies {
   [K in PinnedModalName]: PinnedModalRegistryEntry<K>;

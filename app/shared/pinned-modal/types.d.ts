@@ -16,11 +16,15 @@ export interface PinnedModalPropsMap {
     projectId: Id<"projects">;
     fileId: Id<"files">;
     showOpacity?: boolean;
+    featurePrefix?: "backgroundColor" | "textColor";
+    title?: string;
   };
   "design-panel.text-color-picker": BasePinnedModalProps & {
     projectId: Id<"projects">;
     fileId: Id<"files">;
     showOpacity?: boolean;
+    featurePrefix?: "backgroundColor" | "textColor";
+    title?: string;
   };
 }
 
