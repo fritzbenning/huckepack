@@ -17,7 +17,6 @@ A modern React-based component editor built with Vite and Convex. This applicati
 ### Backend
 
 - **Convex** - Real-time database, authentication, and backend functions
-- **Express.js** - Web framework for Node.js (legacy API endpoints)
 - **TypeScript** - Type safety for backend
 - **OpenAI/Mistral** - AI chat functionality
 - **GitHub API** - Repository integration
@@ -46,30 +45,13 @@ Fill in the required environment variables in `.env`.
 
 ### Development
 
-#### Full Stack Development
-
-Run both frontend and backend simultaneously:
+#### Development Server
 
 ```bash
 npm run dev
 ```
 
-This starts:
-
-- Frontend (Vite): http://localhost:5173
-- Backend (Express): http://localhost:3001
-
-#### Run Frontend Only
-
-```bash
-npm run dev:frontend
-```
-
-#### Run Backend Only
-
-```bash
-npm run dev:backend
-```
+This starts the Vite dev server at http://localhost:5173
 
 #### Electron Desktop App
 
@@ -91,10 +73,6 @@ huckepack/
 │   ├── lib/          # Helper functions (auth, access control)
 │   ├── github/       # GitHub integration actions
 │   └── ai/           # AI chat actions
-├── api/              # Express.js API endpoints (legacy)
-├── server/           # Backend services and utilities
-│   ├── chat/         # AI chat functionality
-│   └── github/       # GitHub integration
 └── electron/         # Electron main and preload scripts
 ```
 
@@ -104,12 +82,6 @@ huckepack/
 
 ```bash
 npm run build
-```
-
-#### Build Backend
-
-```bash
-npm run build:backend
 ```
 
 #### Build Electron App
@@ -176,9 +148,6 @@ Key environment variables needed:
 - `OPENAI_API_KEY` - OpenAI API key
 - `MISTRAL_API_KEY` - Mistral AI API key
 
-#### Legacy (Express API - being phased out)
-- Express API endpoints are still available but being migrated to Convex
-
 ## Learn More
 
 To learn more about the technologies used:
@@ -186,7 +155,6 @@ To learn more about the technologies used:
 - [Vite Documentation](https://vitejs.dev/) - Learn about Vite features and configuration
 - [React Documentation](https://react.dev/) - Learn React
 - [Convex Documentation](https://docs.convex.dev/) - Learn about Convex real-time database
-- [Express.js Documentation](https://expressjs.com/) - Learn about Express (legacy)
 - [Electron Documentation](https://www.electronjs.org/docs) - Learn about Electron
 
 ## Convex Features
@@ -205,17 +173,15 @@ This application uses Convex for:
 
 ### Vercel
 
-The project is configured for Vercel deployment with both frontend and backend:
+The project is configured for Vercel deployment:
 
 ```bash
 npm run vercel-build
 ```
 
-The `vercel.json` configuration handles routing for both the Vite frontend and Express API.
+The `vercel.json` configuration handles routing for the Vite frontend.
 
 ### Manual Deployment
 
 1. Build the frontend: `npm run build`
-2. Build the backend: `npm run build:backend`
-3. Start the backend: `npm run start:backend`
-4. Serve the frontend from the `dist` directory
+2. Serve the frontend from the `dist` directory
