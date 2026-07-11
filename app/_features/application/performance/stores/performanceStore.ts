@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
-import type { PerformanceMetrics, PerformanceStore } from "../types";
+import type { DeepPartialPerformanceMetrics, PerformanceMetrics, PerformanceStore } from "../types";
 
 const initialMetrics: PerformanceMetrics = {
   total: null,
@@ -42,7 +42,8 @@ export function calculatePerformanceTotal(metrics: PerformanceMetrics): number |
     (metrics.savingPhase.astToCode.transformation ?? 0) +
     (metrics.savingPhase.astToCode.formatting ?? 0) +
     (metrics.savingPhase.indexedDBSave ?? 0) +
-    (metrics.savingPhase.sandpackUpdate ?? 0);
+    (metrics.savingPhase.sandpackUpdate ?? 0) +
+    (metrics.savingPhase.databaseSave ?? 0);
 
   const total = manipulationTotal + parsingTotal + savingTotal;
 
@@ -54,10 +55,11 @@ export const usePerformanceStore = create<PerformanceStore>()(
     (set) => ({
       metrics: initialMetrics,
       setMetrics: (newMetrics) =>
-        set((state) => ({
-          metrics: {
+        set((state) => {
+          const mergedMetrics: PerformanceMetrics = {
             ...state.metrics,
             ...newMetrics,
+            total: state.metrics.total,
             manipulationPhase: {
               ...state.metrics.manipulationPhase,
               ...(newMetrics.manipulationPhase || {}),
@@ -78,14 +80,16 @@ export const usePerformanceStore = create<PerformanceStore>()(
                 ...(newMetrics.savingPhase?.astToCode || {}),
               },
             },
-          },
-        })),
+          };
+
+          return { metrics: { ...mergedMetrics, total: calculatePerformanceTotal(mergedMetrics) } };
+        }),
       resetMetrics: () => set({ metrics: initialMetrics }),
     }),
     { name: "PerformanceStore" }
   )
 );
 
-export const setPerformanceMetrics = (metrics: Partial<PerformanceMetrics>) => {
+export const setPerformanceMetrics = (metrics: DeepPartialPerformanceMetrics) => {
   usePerformanceStore.getState().setMetrics(metrics);
 };

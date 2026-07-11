@@ -26,8 +26,18 @@ export interface PerformanceMetrics {
   };
 }
 
+export type DeepPartialPerformanceMetrics = {
+  [K in keyof PerformanceMetrics]?: PerformanceMetrics[K] extends object
+    ? {
+        [J in keyof PerformanceMetrics[K]]?: PerformanceMetrics[K][J] extends object
+          ? Partial<PerformanceMetrics[K][J]>
+          : PerformanceMetrics[K][J];
+      }
+    : PerformanceMetrics[K];
+};
+
 export interface PerformanceStore {
   metrics: PerformanceMetrics;
-  setMetrics: (metrics: Partial<PerformanceMetrics>) => void;
+  setMetrics: (metrics: DeepPartialPerformanceMetrics) => void;
   resetMetrics: () => void;
 }

@@ -1,4 +1,4 @@
-import { calculatePerformanceTotal, setPerformanceMetrics, usePerformanceStore } from "@application/performance";
+import { setPerformanceMetrics } from "@application/performance";
 import { api } from "@convex/_generated/api";
 import type { Id } from "@convex/_generated/dataModel";
 import { convex } from "@lib/convex";
@@ -58,38 +58,21 @@ export const saveFileCode = async (params: {
     console.error(`[saveFileCode] Error processing file ${localFile.id}:`, error);
   });
 
-  const updatedMetrics = usePerformanceStore.getState().metrics;
-  setPerformanceMetrics({
-    total: calculatePerformanceTotal(updatedMetrics),
-  });
-
   const saveFileToDatabaseStart = performance.now();
 
   saveFileToDatabase(pending)
     .then(() => {
       const saveFileToDatabaseEnd = performance.now();
       const databaseSaveDuration = saveFileToDatabaseEnd - saveFileToDatabaseStart;
-      const currentMetrics = usePerformanceStore.getState().metrics;
       setPerformanceMetrics({
-        savingPhase: {
-          astToCode: currentMetrics.savingPhase.astToCode,
-          indexedDBSave: currentMetrics.savingPhase.indexedDBSave,
-          sandpackUpdate: currentMetrics.savingPhase.sandpackUpdate,
-          databaseSave: databaseSaveDuration,
-        },
+        savingPhase: { databaseSave: databaseSaveDuration },
       });
     })
     .catch((error) => {
       const saveFileToDatabaseEnd = performance.now();
       const databaseSaveDuration = saveFileToDatabaseEnd - saveFileToDatabaseStart;
-      const currentMetrics = usePerformanceStore.getState().metrics;
       setPerformanceMetrics({
-        savingPhase: {
-          astToCode: currentMetrics.savingPhase.astToCode,
-          indexedDBSave: currentMetrics.savingPhase.indexedDBSave,
-          sandpackUpdate: currentMetrics.savingPhase.sandpackUpdate,
-          databaseSave: databaseSaveDuration,
-        },
+        savingPhase: { databaseSave: databaseSaveDuration },
       });
       console.error(`[saveFileCode] Error executing mutation for file ${localFile.id}:`, error);
     });

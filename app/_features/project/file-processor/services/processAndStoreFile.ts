@@ -1,4 +1,4 @@
-import { type PerformanceMetrics, setPerformanceMetrics, usePerformanceStore } from "@application/performance";
+import { setPerformanceMetrics } from "@application/performance";
 import { createTransformedAST } from "@ast/utils";
 import { type ImportDefinition, updateProjectStore } from "@hub/projects";
 import { parseAST } from "@project/ast-parser";
@@ -142,15 +142,13 @@ export async function processAndStoreFile(
 
     const fileOperationsEnd = performance.now();
 
-    const currentMetrics = usePerformanceStore.getState().metrics;
-
     setPerformanceMetrics({
-      manipulationPhase: {
-        codeToAST: codeToAST,
-      },
+      // When an AST is provided by the caller, no code→AST conversion happens here, so the
+      // caller (e.g. manipulateFileAST) already recorded the meaningful duration for this step.
+      ...(providedAst ? {} : { manipulationPhase: { codeToAST } }),
       parsingPhase: {
         parseAST: parseASTEnd - parseASTStart,
-        parseASTSteps: parseASTSteps,
+        parseASTSteps,
       },
       savingPhase: {
         astToCode: {
@@ -158,10 +156,8 @@ export async function processAndStoreFile(
           formatting: augmentedVersion.timing?.formatting ?? null,
         },
         indexedDBSave: fileOperationsEnd - fileOperationsStart,
-        sandpackUpdate: null,
-        databaseSave: currentMetrics.savingPhase.databaseSave,
       },
-    } as Partial<PerformanceMetrics>);
+    });
 
     return { [finalPath]: sandpackCode };
   } catch (error) {
