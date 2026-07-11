@@ -7,6 +7,7 @@ import { saveFileCode } from "@project/file/actions/saveFileCode";
 import CodeMirror from "@uiw/react-codemirror";
 import { useMemo } from "react";
 import { toast } from "sonner";
+import { isCodeEditorWritable } from "../constants";
 import { useSelectedNodeHighlight } from "../hooks/useSelectedNodeHighlight";
 import { darkTheme } from "../themes/dark";
 import { darkHighlightStyle } from "../themes/darkHighlight";
@@ -50,6 +51,7 @@ export function CodeEditor() {
       extensions={[javascript({ jsx: true }), syntaxHighlighting(highlightStyle), ...highlightExtension]}
       onChange={handleCodeChange}
       theme={theme}
+      readOnly={!isCodeEditorWritable}
     />
   );
 }
