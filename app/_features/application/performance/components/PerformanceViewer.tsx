@@ -15,7 +15,7 @@ export function PerformanceViewer() {
   }
 
   return (
-    <div className="absolute top-4 right-4 z-50">
+    <div className="absolute top-8 right-2.5 z-50">
       <div className="overflow-hidden rounded-lg border border-neutral-200 bg-white/95 shadow-lg backdrop-blur-sm dark:border-neutral-750 dark:bg-neutral-850/95">
         <ExpandableHeader isExpanded={isExpanded} onClick={() => setIsExpanded(!isExpanded)}>
           {formatDuration(metrics.total)}
