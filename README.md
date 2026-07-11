@@ -25,14 +25,14 @@ A modern React-based component editor built with Vite and Convex. This applicati
 
 ### Prerequisites
 
-Make sure you have Node.js installed (version 18 or higher recommended).
+Make sure you have Node.js (version 18 or higher recommended) and [pnpm](https://pnpm.io/installation) installed.
 
 ### Installation
 
 1. Clone the repository and install dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 2. Set up environment variables:
@@ -48,7 +48,7 @@ Fill in the required environment variables in `.env`.
 #### Development Server
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 This starts the Vite dev server at http://localhost:5173
@@ -56,7 +56,7 @@ This starts the Vite dev server at http://localhost:5173
 #### Electron Desktop App
 
 ```bash
-npm run electron-dev
+pnpm electron-dev
 ```
 
 ### Project Structure
@@ -81,13 +81,13 @@ huckepack/
 #### Build Frontend
 
 ```bash
-npm run build
+pnpm build
 ```
 
 #### Build Electron App
 
 ```bash
-npm run electron-pack
+pnpm electron-pack
 ```
 
 ### Convex Setup
@@ -95,13 +95,13 @@ npm run electron-pack
 1. Install Convex CLI (if not already installed):
 
 ```bash
-npm install -g convex
+pnpm add -g convex
 ```
 
 2. Initialize Convex in your project:
 
 ```bash
-npx convex dev
+pnpm exec convex dev
 ```
 
 This will:
@@ -137,7 +137,7 @@ The Convex backend provides:
 Key environment variables needed:
 
 #### Convex
-- `CONVEX_DEPLOYMENT` - Convex deployment URL (auto-set by `npx convex dev`)
+- `CONVEX_DEPLOYMENT` - Convex deployment URL (auto-set by `pnpm exec convex dev`)
 
 #### GitHub Integration
 - `GITHUB_APP_ID` - GitHub App ID
@@ -176,12 +176,12 @@ This application uses Convex for:
 The project is configured for Vercel deployment:
 
 ```bash
-npm run vercel-build
+pnpm vercel-build
 ```
 
 The `vercel.json` configuration handles routing for the Vite frontend.
 
 ### Manual Deployment
 
-1. Build the frontend: `npm run build`
+1. Build the frontend: `pnpm build`
 2. Serve the frontend from the `dist` directory
